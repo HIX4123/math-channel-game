@@ -8,6 +8,8 @@ nummax = rand.randint(10, 10000)
 
 wrong = 0
 
+print("*** I recommend you to play in a full screen ***\n\n")
+
 print(f"The given number is '{nummax}'. Do not make it!")
 while num < nummax :
     command = input(f"{turnDict[turn]}, input s to +1 or m to x2 : ")
