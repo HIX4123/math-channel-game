@@ -1,6 +1,6 @@
 import random as rand
 
-turnDict = {0 : 'A', 1 : 'B'} # 0 : A, 1 : B
+turnDict = {0: "A", 1: "B"}  # 0 : A, 1 : B
 turn = 0
 
 num = 1
@@ -11,20 +11,21 @@ wrong = 0
 print("\n\n*** I recommend you to play in a full screen ***\n\n")
 
 print(f"The given number is '{nummax}'. Do not make it!")
-while num < nummax :
+while num < nummax:
     command = input(f"{turnDict[turn]}, input s to +1 or m to x2 : ")
-    if command == 's' :
+    if command == "s":
         num += 1
         print(f"conducted +1, now num is '{num}'\n")
-    elif command == 'm' :
+    elif command == "m":
         num *= 2
         print(f"conducted x2, now num is '{num}'\n")
-    else :
+    else:
         print("you gave me something wrong, input s to +1 or m to x2 again\n")
         wrong += 1
-        if wrong >= 3 :
+        if wrong >= 3:
             print("Jesus f**k, Quit Turkey your trolling. You loser, B**h")
-            print("""                                                                                                B::;;;;;;;;;;;;::.QB                                    
+            print(
+                """                                                                                                B::;;;;;;;;;;;;::.QB                                    
                                                                                                BE.,:::::::::::::.,B                                     
                                                                                               BR,;;;;;;;;;;;;;;::BL                                     
                                                                                             2BL,;;;;;;;;;;;;;;::Bs                                      
@@ -73,14 +74,18 @@ while num < nummax :
                                                    ;BB5.:;;;;;;;:.DBUERQBBBBBBBBBBBEUL777vcc7L2ZBBRU:                                  1B::;;;;;;;;;:;B,
                                                   pBOB;:;;;;;;;;:,BQrccccLLsssLccsUPEgRQBBBBBBK                                        LB::;;;;;;;;;,;B 
                                                  BRiBD.;;;;;;;;;,7B2cssLssJJJJsssLLLLLLLLLLcLPG;                                        Bv:;;;;;;;;:7B  
-                                                BB:HB..::::::::,,BR;7c1HJvvcccccccvvvvvvvcvv7rJRBa                                      Up,:::::::,;B   """)
+                                                BB:HB..::::::::,,BR;7c1HJvvcccccccvvvvvvvcvv7rJRBa                                      Up,:::::::,;B   """
+            )
             input("press Enter to quit game")
             quit()
         continue
     wrong = 0
     turn = (turn + 1) % 2
-print(f"Game is over for {turnDict[(turn + 1) % 2]} to overflow the given number '{num}'.\nThe winner is {turnDict[turn]}!")
-print("""                                                                                      
+print(
+    f"Game is over for {turnDict[(turn + 1) % 2]} to overflow the given number '{num}'.\nThe winner is {turnDict[turn]}!"
+)
+print(
+    """                                                                                      
                                                                                       
                                                                                       
                                                                                       
@@ -129,5 +134,6 @@ print("""
                                                                                       
                                                                                       
                                                                                       
-r                                                                                     """)
+r                                                                                     """
+)
 input("press Enter to quit game...")
